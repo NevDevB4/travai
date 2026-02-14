@@ -1,0 +1,41 @@
+# Rust
+/target
+Cargo.lock
+**/*.rs.bk
+
+# Node
+node_modules/
+pnpm-lock.yaml
+dist/
+
+# Tauri
+src-tauri/target/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.env.local
+
+# App data
+%APPDATA%/Travai/
+AppData/Local/Travai/
+
+# Build artifacts
+*.exe
+*.msi
+*.nsis
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp

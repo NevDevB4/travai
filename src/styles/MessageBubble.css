@@ -1,0 +1,131 @@
+.message-bubble {
+  display: flex;
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-bubble.user {
+  justify-content: flex-end;
+}
+
+.message-bubble.assistant {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: 80%;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+.message-bubble.user .message-content {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+.message-bubble.assistant .message-content {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.code-block {
+  background-color: var(--code-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 0;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--code-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.code-language {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--code-text);
+  letter-spacing: 0.05em;
+}
+
+.copy-btn {
+  background: none;
+  border: 1px solid var(--code-text);
+  color: var(--code-text);
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background-color: var(--code-text);
+  color: var(--code-bg);
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1rem;
+  border: none;
+  background-color: var(--code-bg);
+}
+
+.code-block code {
+  background: none;
+  padding: 0;
+  color: var(--code-text);
+}
+
+.text-content {
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.text-content p {
+  margin: 0.5rem 0;
+  color: inherit;
+}
+
+.text-content p:first-child {
+  margin-top: 0;
+}
+
+.text-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 95%;
+  }
+
+  .code-block {
+    font-size: 0.75rem;
+  }
+
+  .code-block pre {
+    padding: 0.75rem;
+  }
+}
